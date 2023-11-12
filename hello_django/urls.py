@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Quando alguém acessar a url abaixo, direcione ele para a seguinte função
+    path('hello/<nome>/', views.hello)
 ]
